@@ -45,7 +45,7 @@ public class Day3{
         }
 
         for (int z=0; z<3; z++){
-            System.out.println(z);
+            System.out.println();
         }
     }
 }
