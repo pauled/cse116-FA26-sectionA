@@ -8,11 +8,17 @@ public class Party{
 
     public Party(){
         this.battlesWon=0;
-        members=new ArrayList<>();
+        this.members=new ArrayList<>();
     }
 
     public void addCharacter(Character hero){
         this.members.add(hero);
+    }
+    public void winBattle(int xp){
+        this.battlesWon++;
+        for (int x=0;x<this.members.size();x++){
+            this.members.get(x).winBattle(xp);
+        }
     }
 
     public static void main(String[] args) {
