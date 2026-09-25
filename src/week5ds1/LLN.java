@@ -53,6 +53,12 @@ public class LLN<G>{
             this.next.insert(value, loc-1);
         }
     }
+    public LLN<G> getNext(){
+        return this.next;
+    }
+    public void setNext(LLN<G> next){
+        this.next=next;
+    }
     public static void main(String[] args) {
         LLN<Integer> head=new LLN(1,null);
         //LLN tail=head;
