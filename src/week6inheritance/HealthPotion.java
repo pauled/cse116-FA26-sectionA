@@ -7,9 +7,18 @@ public class HealthPotion extends GameItem{
         super(x,y);
         this.increase=inc;
     }
+    public String toString(){
+        String out=super.toString();
+        out+=" increase: "+this.increase;
+        return out;
+    }
     public static void main(String[] args) {
         HealthPotion hp1=new HealthPotion(1,2,3);
         double x=hp1.getX();
         System.out.println(x);
+        Weapon w1=new Weapon(4,5,6);
+        String temp=hp1.toString();
+        System.out.println(temp);
+        System.out.println(w1);
     }
 }

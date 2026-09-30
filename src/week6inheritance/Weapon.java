@@ -7,6 +7,11 @@ public class Weapon extends GameItem{
         super(x,y);
         this.damage=damage;
     }
+    public String toString(){
+        String out=super.toString();
+        out+=" damage: "+this.damage;
+        return out;
+    }
     public double getX(){
         return super.getX()+3;
     }
