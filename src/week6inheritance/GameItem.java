@@ -1,6 +1,6 @@
 package week6inheritance;
 
-public abstract class GameItem{
+public class GameItem{
     protected  double xLoc;
     protected  double yLoc;
 
