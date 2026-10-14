@@ -28,6 +28,17 @@ public class Player{
     public int getMaxHP(){
         return this.maxHP;
     }
+    public boolean equals(Object obj) {
+        if (this == obj){
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Player other = (Player) obj;
+        if (this.getHP()!=other.getHP()){ return false; }
+        if (this.getMaxHP()!=other.getMaxHP()){ return false; }
+        if (this.getDamageDealth()!=other.getDamageDealth()){ return false; }
+        return true;
+    }
     public static void main(String[] args) {
         Player p1=new Player(10);
         Player p2=new Player(8);
