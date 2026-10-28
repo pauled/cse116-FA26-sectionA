@@ -29,6 +29,27 @@ public class MergeSort<A>{
         }
     }
     public ArrayList<A> combine(ArrayList<A> half1,ArrayList<A> half2){
-        
+        ArrayList<A> out=new ArrayList<>();
+        int loc1=0;
+        int loc2=0;
+
+        while (loc1<half1.size() && loc2<half2.size()){
+            if (this.comparator.compare(half1.get(loc1), half2.get(loc2))){
+                out.add(half1.get(loc1));
+                loc1++;
+            } else {
+                out.add(half2.get(loc2));
+                loc2++;
+            }
+        }
+        while (loc1<half1.size()){
+            out.add(half1.get(loc1));
+            loc1++;
+        }
+        while (loc2<half2.size()){
+            out.add(half2.get(loc2));
+            loc2++;
+        }
+        return out;
     }
 }
