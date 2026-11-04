@@ -23,8 +23,22 @@ public class Graph<N>{
     public String toString(){
         return this.adjacencyList.toString();
     }
+    public boolean connected(N from,N to){
+        if (! this.adjacencyList.containsKey(from)){
+            return false;
+        }
+        return this.adjacencyList.get(from).contains(to);
+    }
     public boolean isValidPath(ArrayList<N> path){
-        
+        if (path==null || path.size()==0 || path.size()==1){
+            return false;
+        }
+        for (int x=0;x<path.size()-1;x++){
+            if (! connected(path.get(x),path.get(x+1))){
+                return false;
+            }
+        }
+        return true;
     }
     public static void main(String[] args) {
         Graph<String> map=new Graph();
