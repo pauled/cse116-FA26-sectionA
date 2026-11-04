@@ -18,8 +18,10 @@ public class TimeMe{
         int dif=(int)(this.end-this.start);
         int milliSeconds=dif%1000;
         int totalSeconds=dif/1000;
-        int seconds=
-        int minutes=
+        int seconds=totalSeconds%60;
+        int minutes=(totalSeconds/60)%60;
         int hours=totalSeconds/(60*60);
+        String out=String.format("%02d:%02d:%02d.%03d", hours,minutes,seconds,milliSeconds);
+        return out;
     }
 }
