@@ -105,24 +105,27 @@ public class RunSorts{
             timer.lap();
             //System.out.println(sorted);
             System.out.println("add-mergeSort2 "+timer);
-/*
+
             timer.start();
+            b1.resetCount();
             sorted2=b1.bubbleSort1(randInts3);
             timer.lap();
             //System.out.println(sorted);
-            System.out.println("add-bubble1 "+timer);
+            System.out.println("add-bubble1 "+timer+" count:"+b1.getCount());
 
+            b1.resetCount();
             timer.start();
             sorted2=b1.bubbleSort2(randInts3);
             timer.lap();
             //System.out.println(sorted);
-            System.out.println("add-bubble2 "+timer);
-*/
+            System.out.println("add-bubble2 "+timer+" count:"+b1.getCount());
+
+            b1.resetCount();
             timer.start();
             sorted2=b1.bubbleSort3(randInts3);
             timer.lap();
             //System.out.println(sorted);
-            System.out.println("add-bubble3 "+timer);
+            System.out.println("add-bubble3 "+timer+" count:"+b1.getCount());
         }
     }
 }
